@@ -14,15 +14,18 @@
     const url2 = 'itms-apps://itunes.apple.com/cn/app/id%@?mt=8'
 
     function goToDownloadPage(url) {
+      alert(1
       var loadDateTime = new Date();
       window.setTimeout(function () {
         var timeOutDateTime = new Date();
-        if (timeOutDateTime - loadDateTime < 500 0) {
+        if (timeOutDateTime - loadDateTime < 5000) {
+          alert(3)
           window.location = url ;
         }else {
           window.close();
         }
       }, 2000);
+      alert(2)
       window.location = "schema://";
 
       window.onerror = function (err) {
