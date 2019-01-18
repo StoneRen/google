@@ -6,8 +6,8 @@
   </head>
 
   <body>
-    <button onclick="goToDownloadPage(url1)">点击下载</button>
-    <button onclick="goToDownloadPage(url2)">点击下载</button>
+    <button onclick="goToDownloadPage(url1)">点击下载1</button>
+    <button onclick="goToDownloadPage(url2)">点击下载2</button>
     <script>
       const url1 = 'https://itunes.apple.com/cn/app/微信/id414478124?mt=8'
       const url2 = 'itms-apps://itunes.apple.com/cn/app/微信/id414478124?mt=8'
@@ -20,6 +20,7 @@
           var timeOutDateTime = new Date()
           if (timeOutDateTime - loadDateTime < 5000) {
             alert(4)
+            alert(url)
             window.location = url
           } else {
             alert(5)
