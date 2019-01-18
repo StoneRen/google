@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-</head>
+  <body>
+    <button onclick="goToDownloadPage(url1)">点击下载</button>
+    <button onclick="goToDownloadPage(url2)">点击下载</button>
+    <script>
+      const url1 = 'https://itunes.apple.com/cn/app/微信/id414478124?mt=8'
+      const url2 = 'itms-apps://itunes.apple.com/cn/app/微信/id414478124?mt=8'
 
-<body>
-  <button onclick="goToDownloadPage(url1)">点击下载</button>
-  <button onclick="goToDownloadPage(url2)">点击下载</button>
-  <script>
-    const url1 = 'https://itunes.apple.com/cn/app/微信/id414478124?mt=8'
-    const url2 = 'itms-apps://itunes.apple.com/cn/app/微信/id414478124?mt=8'
-
-    function goToDownloadPage(url) {
-      var loadDateTime = new Date();
-      window.setTimeout(function () {
-        var timeOutDateTime = new Date();
-        if (timeOutDateTime - loadDateTime < 5000) {
-          window.location = url ;
-        }else {
-          window.close();
-        }
-      }, 2000);
-      window.location = "schema://";
-    }
-    window.onerror = function (err) {
-      alert(err)
-    }
-  </script>
-</body>
-
+      function goToDownloadPage(url) {
+        alert(1)
+        var loadDateTime = new Date()
+        window.setTimeout(function() {
+          alert(3)
+          var timeOutDateTime = new Date()
+          if (timeOutDateTime - loadDateTime < 5000) {
+            alert(4)
+            window.location = url
+          } else {
+            alert(5)
+            window.close()
+          }
+        }, 2000)
+        alert(2)
+        window.location = 'schema://'
+      }
+      window.onerror = function(err) {
+        alert(err)
+      }
+    </script>
+  </body>
 </html>
