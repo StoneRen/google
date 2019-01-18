@@ -2,12 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>ios跳转App Store测试链接</title>
+    <style>
+      #downloadBox {
+        margin: 40% auto 0;
+        width: 300px;
+      }
+    </style>
   </head>
 
   <body>
+  <div id="downloadBox">
     <button onclick="goToDownloadPage(url1)">点击下载1</button>
     <button onclick="goToDownloadPage(url2)">点击下载2</button>
+  </div>
     <script>
       const url1 = 'https://itunes.apple.com/cn/app/微信/id414478124?mt=8'
       const url2 = 'itms-apps://itunes.apple.com/cn/app/微信/id414478124?mt=8'
